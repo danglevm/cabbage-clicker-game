@@ -23,17 +23,34 @@
     <br><br>
 
     <p>You have:
-        <input type="text" id="text" disabled style=t ext-align:center>
+        <input type="text" id="text" disabled style=text-align:center>
         <!-- Align the text to the center. Disables changes make to the cookie.-->
     </p>
 
 
 
     <button><a href = "#" onClick = "save()">Save</a></button>
+    <button><a href = "#" onclick= "load()">Load</a></button>
 </body>
 
 <body>
     <script type="text/javascript ">
+
+        function add(){
+            cookieCounter = cookieCounter + 1
+            document.getElementById ('text').value = cookieCounter;
+            document.title = cookieCounter + " Cookies";
+        }
+
+        function save(){
+            localStorage.setItem ("cookiecount", cookieCounter);
+        }
+
+        function load (){
+            cookieCounter = localStorage.getItem ("cookiecount");
+            cookiecount = parseInt (cookiecount)
+        }
+
         //i have commit
     </script>
 </body>
