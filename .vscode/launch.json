@@ -9,8 +9,9 @@
         {
             "type": "pwa-chrome",
             "request": "launch",
-            "name": "Open index.html",
-            "file": "C:\\Users\\Dan\\Documents\\GitHub\\cabbage-clicker-game\\cabbage-clicker-game\\index.html"
+            "type": "pwa-chrome",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceFolder}"
         }
     ]
 }

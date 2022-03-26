@@ -13,18 +13,18 @@
 </head>
 
 <body>
+    <h1>Cabbage Clicking Game</h1>
 
     <a href=# onclick="add()"><img src ="img/cabbage.png" style ="width:150px;height:150px;"></a>
-    <!-- cookie counter displayer-->
+    <!-- cabbage counter displayer-->
 
-    <h1>Cabbage Clicking Game</h1>
 
 
     <br><br>
 
     <p>You have:
-        <input type="text" id="text" disabled style=text-align:center>
-        <!-- Align the text to the center. Disables changes make to the cookie.-->
+        <input type="text" id="text" style=text-align:center>
+        <!-- Align the text to the center. Disables changes make to the cabbage counter.-->
     </p>
 
 
@@ -35,8 +35,9 @@
 
 <body>
     <script type="text/javascript ">
-
+        //function is adding
         function add(){
+            cabbageCounter = 0
             cabbageCounter = cabbageCounter + 1
             document.getElementById ('text').value = cabbageCounter;
             document.title = cabbageCounter + " Cabbage";
