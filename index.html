@@ -15,7 +15,7 @@
 <body>
     <h1>Cabbage Clicking Game</h1>
 
-    <a href=# onclick="add()"><img src ="img/cabbage.png" style ="width:150px;height:150px;"></a>
+    <a href=# onclick="add()"><img src="img/cabbage.png" style="width:150px;height:150px;"></a>
     <!-- cabbage counter displayer-->
 
 
@@ -36,20 +36,22 @@
 <body>
     <script type="text/javascript ">
         //function is adding
-        function add(){
-            cabbageCounter = 0
+        cabbageCounter = 0
+
+        function add() {
+
             cabbageCounter = cabbageCounter + 1
-            document.getElementById ('text').value = cabbageCounter;
+            document.getElementById('text').value = cabbageCounter;
             document.title = cabbageCounter + " Cabbage";
         }
 
-        function save(){
-            localStorage.setItem ("cabbagecount", cabbageCounter);
+        function save() {
+            localStorage.setItem("cabbagecount", cabbageCounter);
         }
 
-        function load (){
-            cookieCounter = localStorage.getItem ("cabbagecount");
-            cookiecount = parseInt (cabbageCounter)
+        function load() {
+            cookieCounter = localStorage.getItem("cabbagecount");
+            cookiecount = parseInt(cabbageCounter)
         }
 
         //i have commit
