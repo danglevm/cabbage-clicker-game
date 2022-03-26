@@ -5,7 +5,7 @@
 <head>
 
     <head>Cabbage Clicker Game</head>
-    <TITLE>This is my first website</TITLE>
+    <TITLE>Cabbage Clicker Game</TITLE>
     <!-- Title Website-->
     <link rel="stylesheet" href="style.css" />
     <!-- Importing style.css-->
@@ -14,10 +14,10 @@
 
 <body>
 
-    <a href=# onclick="add()"> img src ="img/Cabbage.png"</a>
+    <a href=# onclick="add()"><img src ="img/cabbage.png" style ="width:150px;height:150px;"></a>
     <!-- cookie counter displayer-->
 
-    <h1>Cookie Clicking Game</h1>
+    <h1>Cabbage Clicking Game</h1>
 
 
     <br><br>
@@ -37,18 +37,18 @@
     <script type="text/javascript ">
 
         function add(){
-            cookieCounter = cookieCounter + 1
-            document.getElementById ('text').value = cookieCounter;
-            document.title = cookieCounter + " Cookies";
+            cabbageCounter = cabbageCounter + 1
+            document.getElementById ('text').value = cabbageCounter;
+            document.title = cabbageCounter + " Cabbage";
         }
 
         function save(){
-            localStorage.setItem ("cookiecount", cookieCounter);
+            localStorage.setItem ("cabbagecount", cabbageCounter);
         }
 
         function load (){
-            cookieCounter = localStorage.getItem ("cookiecount");
-            cookiecount = parseInt (cookiecount)
+            cookieCounter = localStorage.getItem ("cabbagecount");
+            cookiecount = parseInt (cabbageCounter)
         }
 
         //i have commit
