@@ -17,12 +17,14 @@
         <a href=# onclick="add()"><img src ="img/cabbage.png" style ="width:150px;height:150px;"></a>
     <!-- cabbage counter displayer-->
 
+    
+    <p id = "cabbagespersecond"> You are producing 0 cabbages per second.</p>
 
 
     <br><br>
 
     <p>You have:
-        <input type="text" id="text" disabled style=text-align:center>
+        <input type="text" id="text" disabled style=text-align:center value = 0>
         <!-- Align the text to the center. Disables changes make to the cabbage counter.-->
     </p>
 
@@ -41,7 +43,7 @@
     
 
         <!-- Sets a button in the Store to buy an autoClicker-->
-        <p>Buy one auto clicker</p>
+        <h3>Buy one auto clicker</h3>
         <button><a href ="#" onClick ="buyAutoClicker()"><img src= "img/pointer.png" style = "width:50px;height:50px;"></button> 
 
         <!-- Sets this paragraph to track the cost of buying an autoClicker-->
@@ -51,104 +53,27 @@
         <!-- Sets this paragraph to track the number of autoClicker the player has-->
 
     <p id = "amountAutoClicker"> You own 0 Auto Clickers </p>
-        
 
+
+
+
+        <br> <br>
+
+        <!--Button for buying a farm-->
+        <h3>Buy one farm</h3>
+
+        <button><a href ="#" onClick ="buyFarm()"><img src= "img/farmhouse.PNG" style = "width:60px;height:60px;"></button> 
+        
+        <p id="costFarm">30 cabbages</p>
+        <p id="amountFarm">You own 0 Farms</p>
 
     
 </body>
 
 <body>
-    <script type="text/javascript ">
-          
-          
-          var cabbagecount = 0; //The number of times the cabbage has been clicked
-          var autoClicker = 0; //The number of auto clickers
 
-        
-        function buyAutoClicker (){
-
-        }
-
-
-
-        //A function that adds 1 value to the counter everytime the cabbage is clicked
-        function add(){
-          
-            cabbagecount = cabbagecount + 1;
-              update()
-        }
-
-
-
-
-
-
-        function save(){ 
-            //function that saves the cabbage count, number of autoclickers
-                localStorage.setItem ("cabbagecount", cabbagecount);
-                localStorage.setItem ("autoClicker", autoClicker);
-        }
-
-
-
-        function timer(){
-            //This function is used for the tracking the number of cookies there are to add into the autoClicker. Adding the initial value with the autoClicker generated value
-            cabbagecount = cabbagecount + autoClicker;
-            update ()
-
-        }
-
-        setInterval (timer, 10000) //Calls the timer function every 100000 miliseconds (10 seconds)
-
-
-
-        function load (){
-            //A function that loads the count of the cabbage and parse the integer, loads the count of the autoClick and parse it out
-                cabbagecount = localStorage.getItem ("cabbagecount");
-                cabbagecount = parseInt (cabbagecount);
-                autoClicker = localStorage.getItem("autoClicker");
-                autoClicker = parseInt(autoClicker);
-           
-           //Sets the value of the element 'text' to the value of the item tagged with cabbagecount
-         update ()
-        }
-
-            //Buys an autoClicker anytime the 'pointer' button is pressed
-        function buyAutoClicker (){
-            //If the number of cabbages the player have is more than 12, they can buy one autoclicker - update a good formula for randomizing the cost later
-            if (cabbagecount >= ((autoClicker+1)*12)){
-                cabbagecount = cabbagecount - ((autoClicker+1)*12);
-                autoClicker = autoClicker+1
-                update()
-            
-            }
-        }
-
-
-
-        
-        function reset ()
-        //A function that resets the cabbage count back to zero
-    {
-        cabbagecount = 0
-        autoClicker = 0
-        cabbagecount = parseInt (cabbagecount)
-
-        //Sets the value of the element 'text' to variable cabbagecount = 0
-        update()
-    }
-
-        //Updates the value of the element 'text', the amount of autoClickers the player have and the cost of buying more autoClickers every time needed
-        function update(){
-            document.getElementById ('text').value = cabbagecount;
-            document.title = cabbagecount + " Cabbage"
-            document.getElementById('amountAutoClicker').innerHTML = "You own " + autoClicker + " Auto Clickers";
-            document.getElementById ('costAutoClicker').innerHTML =  ((autoClicker+1)*12)+" Cabbages";
-        }
-
-
-
-    </script>
+    <script type ="text/javascript" src = "script.js"></script>
+   
 </body>
 
 </html>
