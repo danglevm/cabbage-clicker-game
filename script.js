@@ -131,7 +131,7 @@ function buyMultiplier(){
 function buyFarmMultipliers (){
   let y = Math.pow(8, farmMultiplier);
     if (cabbagecount >= ((farmMultiplier+1)*y*100)){
-    cabbagecount = cabbagecount - ((farmMultiplier+1)*y*100);
+    cabbagecount = cabbagecount - ((farmMultiplier+1)*y*g100);
     farmMultiplier = farmMultiplier +1;
     }
     update()
