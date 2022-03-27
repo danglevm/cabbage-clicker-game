@@ -1,2 +1,3 @@
 # cabbage-clicker-game
 For our project we made a web game called Cabbage Clicker with the objective of clicking the cabbage repeatedly to gain more cabbages. When you gain enough cabbages you can purchase power ups such as auto clickers and cabbage farms to raise cabbage production. Our project is inspired by the popular web game Cookie Clicker but with a cabbage twist. We created this game using HTML, CSS, and Javascript in Visual Studio Code and set up a GitHub repository to make collaboration easier. This game is not only fun to play, but it was also fun to make and we all learned a lot about programming, web development, game design, and group work. 
+------------------------------------
