@@ -4,6 +4,8 @@ var farms = 0;
 
 var clickmultiplier = 1; //The click multiplier variable
 
+var farmMultiplier = 1;
+
 var multiplier = 1;
 
 
@@ -29,6 +31,7 @@ function save(){
       localStorage.setItem ("autoClicker", autoClicker);
       localStorage.setItem ("farms", farms);
       localStorage.setItem ("clickmultiplier", clickmultiplier);
+      localStorage.setItem ("farmMultiplier", farmMultiplier);
 
 }
 
@@ -40,7 +43,8 @@ function reset ()
     autoClicker = 0
     farms = 0
     clickmultiplier = 1
-    cabbagecount = parseInt (cabbagecount)
+    farmMultiplier = 1
+    cabbagecount = parseFloat (cabbagecount)
 
 
 //Sets the value of the element 'text' to variable cabbagecount = 0
@@ -53,7 +57,7 @@ update()
 function timer(){
   //This function is used for the tracking the number of cookies there are to add into the autoClicker. Adding the initial value with the autoClicker generated value
         cabbagecount = cabbagecount + autoClicker;
-        cabbagecount = cabbagecount + farms*2;
+        cabbagecount = cabbagecount + farms*2*farmMultiplier;
         update ()
 
 }
@@ -63,13 +67,17 @@ setInterval (timer, 1000) //Calls the timer function every 10000 miliseconds (1 
 
 
 function load (){
-  //A function that loads the count of the cabbage and parse the integer, loads the count of the autoClick and parse it out
+  //A function that loads the stored value from the local web storage and inserts the player's saved value.
         cabbagecount = localStorage.getItem ("cabbagecount");
         cabbagecount = parseInt (cabbagecount);
         autoClicker = localStorage.getItem("autoClicker");
         autoClicker = parseInt(autoClicker);
         farms = localStorage.getItem ("farms");
         farms = parseInt (farms);
+        clickmultiplier = localStorage.getItem("clickmultiplier");
+        clickmultiplier = parseInt(clickmultiplier);
+        farmMultiplier = localStorage.getItem("farmMultiplier");
+        farmMultiplier = parseInt(farmMultiplier);
       
  
  //Sets the value of the element 'text' to the value of the item tagged with cabbagecount
@@ -118,6 +126,17 @@ function buyMultiplier(){
   }
 }
 
+//Buys the farm multiplier upgrade
+
+function buyFarmMultiplier (){
+  let y = Math.pow(8, farmMultiplier);
+    if (cabbagecount >= ((farmMultiplier+1)*y*100))
+    cabbagecount = cabbagecount - ((farmMultiplier+1)*y*100);
+    farmMultiplier = farmMultiplier +1;
+
+    update()
+}
+
 
 
 
@@ -142,9 +161,16 @@ function update(){
   document.getElementById('currentMultiplier').innerHTML = "Your current multiplier is x" + clickmultiplier
 
 
+  //farm multiplier
+  let y = Math.pow(8, farmMultiplier);
+
+  document.getElementById('farmMultiplier').innerHTML = ((farmMultiplier+1)*y*100) + " Cabbages"
+  document.getElementById('currentFarmMultiplier').innerHTML = "The current farm multiplier level is x" + farmMultiplier
+
+
   //Producing the number of cabbages produced by the player per second
 
-  document.getElementById ('cabbagespersecond').innerHTML = "You are producing " + (((autoClicker)+(farms*2))*multiplier)+ " cabbages per second";
+  document.getElementById ('cabbagespersecond').innerHTML = "You are producing " + (((autoClicker)+(farms*2*farmMultiplier)))+ " cabbages per second";
   
 }
 
