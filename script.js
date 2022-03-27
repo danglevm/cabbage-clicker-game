@@ -44,7 +44,7 @@ function reset ()
     farms = 0
     clickmultiplier = 1
     farmMultiplier = 1
-    cabbagecount = parseFloat (cabbagecount)
+    cabbagecount = parseInt (cabbagecount)
 
 
 //Sets the value of the element 'text' to variable cabbagecount = 0
@@ -128,12 +128,12 @@ function buyMultiplier(){
 
 //Buys the farm multiplier upgrade
 
-function buyFarmMultiplier (){
+function buyFarmMultipliers (){
   let y = Math.pow(8, farmMultiplier);
-    if (cabbagecount >= ((farmMultiplier+1)*y*100))
+    if (cabbagecount >= ((farmMultiplier+1)*y*100)){
     cabbagecount = cabbagecount - ((farmMultiplier+1)*y*100);
     farmMultiplier = farmMultiplier +1;
-
+    }
     update()
 }
 
