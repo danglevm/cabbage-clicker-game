@@ -8,6 +8,7 @@ var farmMultiplier = 1;
 
 var multiplier = 1;
 
+var cabbagesProduced = 0;
 
 
 
@@ -138,19 +139,39 @@ function buyFarmMultipliers (){
 }
 
 
-
+/*=====================================================================================
+UPDATE method
+=======================================================================================*/
 
 
 //Updates the value of the element 'text', the amount of autoClickers the player have and the cost of buying more autoClickers every time needed
 function update(){
-  document.getElementById ('text').value = cabbagecount;
-  document.title = cabbagecount + " Cabbage"
-  document.getElementById('amountAutoClicker').innerHTML = "You own " + autoClicker + " Auto Clickers";
+
+  //Variable for the total number of cabbages produced per second.
+
+  cabbagesProduced = (((autoClicker)+(farms*2*farmMultiplier)));
+
+
+
+
+
+  
+  //if cabbage count is lower or equals to 1, the title and the input display text will show 1 cabbage. If it is more than one then cabbage turns into its plural cabbages.
+  if (cabbagecount <= 1){
+  document.getElementById ('text').value = cabbagecount + " Cabbage";
+  document.title = cabbagecount + " Cabbage - Cabbage Clicker";
+  } else{
+  document.getElementById ('text').value = cabbagecount + " Cabbages";
+  document.title = cabbagecount + " Cabbages - Cabbage Clicker";
+  }
+
+  
+  document.getElementById('amountAutoClicker').innerHTML = autoClicker + " Auto Clickers";
   document.getElementById ('costAutoClicker').innerHTML =  ((autoClicker+1)*12)+" Cabbages";
 
 
   //Produces the number of farms the player has
-  document.getElementById ('amountFarm').innerHTML = "You own " + farms + " Farms"
+  document.getElementById ('amountFarm').innerHTML = farms + " Farms"
   document.getElementById ('costFarm').innerHTML = ((farms+1)*30) + " Cabbages"
 
 
@@ -168,9 +189,16 @@ function update(){
   document.getElementById('currentFarmMultiplier').innerHTML = "The current farm multiplier level is x" + farmMultiplier
 
 
-  //Producing the number of cabbages produced by the player per second
 
-  document.getElementById ('cabbagespersecond').innerHTML = "You are producing " + (((autoClicker)+(farms*2*farmMultiplier)))+ " cabbages per second";
+
+  //The number of cabbages produced by the player per second. Cabbage production smaller than 1 - single noun. larger than 1 - plural cabbage.
+
+  if (cabbagesProduced <= 1){
+    document.getElementById ('cabbagespersecond').innerHTML = cabbagesProduced + " cabbage per second";
+  } else{
+    document.getElementById ('cabbagespersecond').innerHTML = cabbagesProduced + " cabbages per second";
+  }
+ 
   
 }
 

@@ -1,4 +1,65 @@
-body {
-    
-    background: rgb(255, 212, 237);
+.main{
+    background-color: rgb(255, 212, 237);
+}
+
+/*=====================================================================================
+GRID-CONTAINER
+=======================================================================================*/
+
+/*Grid layout for the whole game*/
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 5px;
+    /*padding: 5px;*/
+}
+
+.grid-container>div.item1>div#choice-buttons {
+    /*padding: 5px 0;*/
+    font-size: 15px;
+
+/*=====================================================================================
+BUTTONS START
+=======================================================================================*/
+}
+/*item1 contains all load, reset, save button and the cabbage*/
+
+.item1 {
+    text-align: center;
+    grid-column: 1;
+    grid-row: 1;
+}
+/*item2 is autoclicker buy*/
+
+.item2 {
+    text-align: left;
+    grid-column: 2;
+    grid-row: 1;
+}
+/*item3 is cursor multiplier upgrade*/
+
+.item3 {
+    text-align: left;
+    grid-column: 3;
+    grid-row: 1;
+}
+
+
+
+/*=====================================================================================
+BUTTONS END
+=======================================================================================*/
+
+/*Cabbage image*/
+#cabbageImg {
+  
+
+
+   
+}
+
+h2#store-upgrade{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: underline double green;
+    text-underline-position: under;
 }
