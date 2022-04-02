@@ -166,12 +166,12 @@ function update(){
   }
 
   
-  document.getElementById('amountAutoClicker').innerHTML = "You own " + autoClicker + " Auto Clickers";
+  document.getElementById('amountAutoClicker').innerHTML = autoClicker + " Auto Clickers";
   document.getElementById ('costAutoClicker').innerHTML =  ((autoClicker+1)*12)+" Cabbages";
 
 
   //Produces the number of farms the player has
-  document.getElementById ('amountFarm').innerHTML = "You own " + farms + " Farms"
+  document.getElementById ('amountFarm').innerHTML = farms + " Farms"
   document.getElementById ('costFarm').innerHTML = ((farms+1)*30) + " Cabbages"
 
 

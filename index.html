@@ -1,35 +1,29 @@
 <!DOCTYPE html>
-<html lang ="en">
+<html lang = "en">
 
 
 <head>
     <meta charset="UTF-8">
-    <title> 0 Cabbage - Cabbage Clicker</title>
-    <link rel = "shortcut icon" type = "image" href ="img/pixil-frame-0(2).png">
+    <title>0 Cabbage - Cabbage Clicker</title>
+    <link rel = "shortcut icon" type = "image" href = "img/pixil-frame-0(2).png">
+    <link rel="stylesheet" href="style.css">
+    <!-- Importing style.css-->
 
-    <!-- Important style.css file -->
-    <link rel="stylesheet" href="style.css" />
-
-    
-    
 </head>
 
-
 <body class = "main">
-    <script type="text/javascript" src="script.js"></script>
 
-<div class = "grid-container">
- 
-        
+
+    <div class="grid-container">
         <div class="item1">
-           
+            <script type="text/javascript" src="script.js"></script>
             <h1>Cabbage Clicker</h1>
-            <a href="javascript:void(0);" onclick="add()"><div id = "cabbageImg"><img src="img/pixil-frame-0(2).png" style = "width: 150px; height: 150px;"></a>
+            <a href="javascript:void(0);" onclick="add()"><img src="img/pixil-frame-0(2).png" style="width:150px;height:150px;"></a>
 
 
 
             <!-- cabbage counter displayer-->
-            <p id="cabbagespersecond"> 0 cabbages per second.</p>
+            <p id="cabbagespersecond"> 0 cabbage per second.</p>
             <br><br>
             <p>
                 <input type="text" id="text" disabled style=text-align:center value="0 Cabbage">
@@ -37,28 +31,28 @@
             </p>
 
 
-        
+             <!-- Buttons section - Save, Load, Reset-->
+            <div id = "choice-buttons">
+               
+                <button><a href = "javascript:void(0);" onClick = "save()">Save</a></button>
+                <button><a href = "javascript:void(0);" onclick= "load()">Load</a></button>
+                <button><a href = "javascript:void(0);" onClick = "reset()"> Reset</a></button>
+            </div>
 
-           
-      
-           
+            
+             <!-- Buttons section - Save, Load, Reset-->
 
-            <div>
-            <!-- Buttons section - Save, Load, Reset-->
-            <button><a href = "javascript:void(0);" onClick = "save()">Save</a></button>
-            <button><a href = "javascript:void(0);" onclick= "load()">Load</a></button>
-            <button><a href = "javascript:void(0);" onClick = "reset()"> Reset</a></button>
-        </div> <!--div choice buttons ending-->
-        
-        </div> <!--div.item1 ending-->
+
+        </div> <!-- div.item1-->
+
+
 
 
 
         <br><br>
         <!-- A section for upgrades to be bought at a store-->
-        
         <div class="item2">
-            <h2>Store</h2>
+            <h2 id= "store-upgrade">Store</h2>
             <div>
                 <!-- Sets a button in the Store to buy an autoClicker-->
                 <h3>Buy one auto clicker</h3>
@@ -70,67 +64,54 @@
                 <!-- Sets this paragraph to track the cost of buying an autoClicker-->
                 <p id="costAutoClicker">12 Cabbages</p>
                 <!-- Sets this paragraph to track the number of autoClicker the player has-->
-                <p id="amountAutoClicker"> You own 0 Auto Clickers </p>
+                <p id="amountAutoClicker"> 0 Auto Clickers </p>
             </div>
-             
-        
-
-
             <br>
-
-
             <!--Button for buying a farm-->
             <div>
                 <h3>Buy one farm</h3>
                 <button><a href ="javascript:void(0);" onClick ="buyFarm()"><img src= "img/farmhouse.PNG" style = "width:60px;height:60px;"></a></button>
             </div>
-
-
             <div>
-                <p id="costFarm">30 cabbages</p>
-                <p id="amountFarm">You own 0 Farms</p>
+                <p id="costFarm">30 Cabbages</p>
+                <p id="amountFarm"> 0 Farms</p>
             </div>
             <!-- Adding upgrades to existing clickers-->
-        </div>
-     
+
+        </div><!--div.item2-->
 
         <br><br>
 
 
 
         <!-- Sets the div id of the cursor upgrade to 'item3'-->
-  
         <div class="item3">
-            <h2>Upgrades</h2>
+            <h2 id = "store-upgrade">Upgrades</h2>
             <div>
                 <!-- Cursor upgrade - every level increases clicking power by 1 value-->
                 <h3 id="clickmultiplier"> Cursor Multiplier</h3>
                 <button><a href="javascript:void(0);" onClick = "buyMultiplier()"><img src = "img/red_cursor.png" style = "width: 60px;height:60px;" id="amountMultiplier"></span></a></button>
                 <p id="costMultiplier"> 200 Cabbages</p>
-                <p id="currentMultiplier"> Your current multiplier is x1 </p>
+                <p id="currentMultiplier"> x1 current multiplier  </p>
             </div>
-      
-    
+
 
 
             <br>
 
 
-            
             <!--Upgrades farm power production level by 1-->
             <h3> Increase Farm efficiency by one level</h3>
 
             <button><a href="javascript:void(0);" onClick = "buyFarmMultipliers()" ><img src ="img/big_farmhouse.jpg" style = "width: 60px;height:60px;"></a></button>
 
             <p id="farmMultiplier"> 1600 Cabbages</p>
-            <p id="currentFarmMultiplier"> The current farm multiplier level is x1</p>
+            <p id="currentFarmMultiplier"> x1 current farm multiplier </p>
 
-        </div>
+        </div> <!--div.item3-->
 
 
-    
-    </div>
-    
+    </div> <!--div.grid-container-->
     </body>
 
-    </html>
+</html>

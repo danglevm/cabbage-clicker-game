@@ -2,6 +2,11 @@
     background-color: rgb(255, 212, 237);
 }
 
+/*=====================================================================================
+GRID-CONTAINER
+=======================================================================================*/
+
+/*Grid layout for the whole game*/
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -9,9 +14,13 @@
     /*padding: 5px;*/
 }
 
-.grid-container>div.item1>div {
+.grid-container>div.item1>div#choice-buttons {
     /*padding: 5px 0;*/
     font-size: 15px;
+
+/*=====================================================================================
+BUTTONS START
+=======================================================================================*/
 }
 /*item1 contains all load, reset, save button and the cabbage*/
 
@@ -47,4 +56,10 @@ BUTTONS END
 
 
    
+}
+
+h2#store-upgrade{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: underline double green;
+    text-underline-position: under;
 }
