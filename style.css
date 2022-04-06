@@ -1,6 +1,39 @@
 .main{
-    background-color: rgb(255, 212, 237);
+    margin:0px;
+    padding: 0px;
 }
+#parent { 
+    background-size: cover;   
+    width: 100%;
+    height: 1090px;
+    position: relative;
+    background-repeat: no-repeat;
+    margin: 0px;
+
+
+
+}
+
+
+/*pseudoselector used to turn down the opacity of the background without affecting the text*/
+#parent::after {
+	content: ''; 
+	width: 100%; 
+	height: 100%;
+	background-image: url("background-images/island-background.jpg"); 
+	opacity: 0.5; 
+	position: absolute; 
+	top: 0; 
+	left: 0;
+	z-index: -1;
+}
+
+  
+
+
+
+
+    
 
 /*=====================================================================================
 GRID-CONTAINER
@@ -17,10 +50,20 @@ GRID-CONTAINER
 .grid-container>div.item1>div#choice-buttons {
     /*padding: 5px 0;*/
     font-size: 15px;
-
+}
 /*=====================================================================================
 BUTTONS START
 =======================================================================================*/
+
+#upgrade-display-buttons{
+    margin: 0px;
+    padding: 0px;
+    object-fit: fill;
+    height: 64.25px;
+    width: 64.50px;
+    background-size: 
+    
+  
 }
 /*item1 contains all load, reset, save button and the cabbage*/
 
@@ -50,15 +93,8 @@ BUTTONS START
 BUTTONS END
 =======================================================================================*/
 
-/*Cabbage image*/
-#cabbageImg {
-  
-
-
-   
-}
-
 h2#store-upgrade{
+    position: relative;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-decoration: underline double green;
     text-underline-position: under;
