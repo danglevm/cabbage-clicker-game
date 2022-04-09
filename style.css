@@ -1,3 +1,6 @@
+
+
+
 .main{
     margin:0px;
     padding: 0px;
@@ -55,23 +58,44 @@ GRID-CONTAINER
 BUTTONS START
 =======================================================================================*/
 
-#upgrade-display-buttons{
-    margin: 0px;
+.upgrade-display-buttons{
     padding: 0px;
+    margin: 5px;
     object-fit: fill;
     height: 64.25px;
     width: 64.50px;
-    background-size: 
+    border: 2px solid red;
+
     
   
 }
 /*item1 contains all load, reset, save button and the cabbage*/
 
+
 .item1 {
     text-align: center;
     grid-column: 1;
     grid-row: 1;
+    
 }
+
+
+/*Changing the margin and padding of the choice buttons*/
+.choice-buttons{
+    margin: 2px;
+    padding: 5px;
+    text-decoration: none;
+    border: 2px solid;
+
+
+}
+
+/*Properties of the image of the cabbage*/
+#cabbageImage{
+    margin: 10px;
+    padding: 10px;
+}
+
 /*item2 is autoclicker buy*/
 
 .item2 {

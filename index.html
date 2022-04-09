@@ -27,7 +27,7 @@
             <h1>McCabbage's Cabbage Farm</h1>
 
 
-            <a href="javascript:void(0);" onclick="add()"><img src="img/pixil-frame-0(2).png" style="width:150px;height:150px;"></a>
+            <a id = "cabbageImage" href="javascript:void(0);" onclick="add()"><img src="img/pixil-frame-0(2).png" style="width:150px;height:150px;"></a>
 
 
 
@@ -41,11 +41,11 @@
 
 
              <!-- Buttons section - Save, Load, Reset-->
-            <div id = "choice-buttons">
+            <div>
                
-                <button><a href = "javascript:void(0);" onClick = "save()">Save</a></button>
-                <button><a href = "javascript:void(0);" onclick= "load()">Load</a></button>
-                <button><a href = "javascript:void(0);" onClick = "reset()"> Reset</a></button>
+                <button class = "choice-buttons"><a href = "javascript:void(0);" onClick = "save()">Save</a></button>
+                <button class = "choice-buttons"><a href = "javascript:void(0);" onclick= "load()">Load</a></button>
+                <button class = "choice-buttons"><a href = "javascript:void(0);" onClick = "reset()"> Reset</a></button>
             </div>
 
             
@@ -65,7 +65,7 @@
             <div>
                 <!-- Sets a button in the Store to buy an autoClicker-->
                 <h3>Cabbage Harvester</h3>
-                <button id = "upgrade-display-buttons"><a href ="javascript:void(0);" onClick ="buyAutoClicker()"><img src= "img/pointer.png" style = "width:60px;height:60px;"> </a></button>
+                <button class = "upgrade-display-buttons"><a href ="javascript:void(0);" onClick ="buyAutoClicker()"><img src= "img/pointer.png" style = "width:60px;height:60px;"> </a></button>
             </div> 
 
 
@@ -84,7 +84,7 @@
             <!--Button for buying a cabbage farm-->
             <div>
                 <h3>Cabbage Farm</h3>
-                <button id = "upgrade-display-buttons"><a href ="javascript:void(0);" onClick ="buyFarm()"><img src= "img/farmhouse.PNG" style = "width:60px;height:60px;"></a></button>
+                <button class = "upgrade-display-buttons"><a href ="javascript:void(0);" onClick ="buyFarm()"><img src= "img/farmhouse.PNG" style = "width:60px;height:60px;"></a></button>
             </div>
             <div>
                 <p id="costFarm">30 Cabbages</p>
@@ -97,7 +97,7 @@
             <!--Buy cabbage Factory-->
             <div>
                 <h3>Cabbage Factory</h3>
-                <button id = "upgrade-display-buttons"><a href ="javascript:void(0);" onClick ="buyFactory()"><img src= "img/farmhouse.PNG" style = "width: 60px; height: 60px;"></a></button>
+                <button class = "upgrade-display-buttons"><a href ="javascript:void(0);" onClick ="buyFactory()"><img src= "img/farmhouse.PNG" style = "width: 60px; height: 60px;"></a></button>
             </div>
             <div>
                 <p id="costFactory">1500 Cabbages</p>
@@ -108,7 +108,7 @@
             <!--Buy Cabbage Corporate-->
             <div>
                 <h3>Cabbage Corporate</h3>
-                <button id = "upgrade-display-buttons"><a href ="javascript:void(0);" onClick ="buyCorporate()"><img src= "img/businessman.png" style = "width:60px;height:60px;"></a></button>
+                <button class = "upgrade-display-buttons"><a href ="javascript:void(0);" onClick ="buyCorporate()"><img src= "img/businessman.png" style = "width:60px;height:60px;"></a></button>
             </div>
             <div>
                 <p id="costFarm">8000 Cabbages</p>
@@ -119,7 +119,7 @@
             <!--Buy Cabbage Conglomerate-->
             <div>
                 <h3>Cabbage Conglomerate</h3>
-                <button id = "upgrade-display-buttons"><a href ="javascript:void(0);" onClick ="buyConglomerate()"><img src= "img/bank.JPG" style = "width:60px;height:60px;"></a></button>
+                <button class = "upgrade-display-buttons"><a href ="javascript:void(0);" onClick ="buyConglomerate()"><img src= "img/bank.JPG" style = "width:60px;height:60px;"></a></button>
             </div>
             <div>
                 <p id="costFarm">20000 Cabbages</p>
@@ -145,7 +145,7 @@
             <div>
                 <!-- Cursor upgrade - every level increases clicking power by 1 value-->
                 <h3 id="clickmultiplier"> Cursor Multiplier</h3>
-                <button id = "upgrade-display-buttons"><a href="javascript:void(0);" onClick = "buyMultiplier()"><img src = "img/red_cursor.png" style = "width: 60px;height:60px;" id="amountMultiplier"></span></a></button>
+                <button class = "upgrade-display-buttons"><a href="javascript:void(0);" onClick = "buyMultiplier()"><img src = "img/red_cursor.png" style = "width: 60px;height:60px;" id="amountMultiplier"></span></a></button>
                 <p id="costMultiplier"> 200 Cabbages</p>
                 <p id="currentMultiplier"> x1 current multiplier  </p>
             </div>
@@ -159,7 +159,7 @@
         
             <h3> Farm Efficiency </h3>
 
-            <button id = "upgrade-display-buttons"><a href="javascript:void(0);" onClick = "buyFarmMultipliers()" ><img src ="img/big_farmhouse.jpg" style = "width: 60px;height:60px;"></a></button>
+            <button class = "upgrade-display-buttons"><a href="javascript:void(0);" onClick = "buyFarmMultipliers()" ><img src ="img/big_farmhouse.jpg" style = "width: 60px;height:60px;"></a></button>
 
             <p id="farmMultiplier"> 1600 Cabbages</p>
             <p id="currentFarmMultiplier"> x1 current farm multiplier </p>
